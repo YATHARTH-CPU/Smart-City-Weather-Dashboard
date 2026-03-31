@@ -8,17 +8,31 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>🌤️ Pune Weather Dashboard</h1>
+<div class="app">
 
-        <div id="loading" style="display: none;">
-            <p>⏳ Loading...</p>
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h2>📍 Pune, India</h2>
+            <p id="time"></p>
         </div>
-        <div id="weatherContainer"></div>
+        <div class="temp">
+            <h1 id="temp">--°</h1>
+            <p id="condition">--</p>
+        </div>
     </div>
 
+    <!-- Green Highlight Card -->
+    <div class="highlight">
+        <h3>Weather Status</h3>
+        <p id="status">Loading...</p>
+    </div>
 
-    <script src="main.js"></script>
+    <!-- Grid Data -->
+    <div class="grid" id="weatherContainer"></div>
 
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
