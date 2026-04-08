@@ -10,9 +10,22 @@
 
 <div class="app">
 
+    <div class="search-container">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-bar" 
+            placeholder="Search city..." 
+            autocomplete="off"
+        >
+        <button id="searchBtn" class="search-btn">🔍</button>
+        <button id="themeToggleBtn" class="theme-toggle-btn">🌙</button>
+        <button id="forecastBtn" class="forecast-btn">📅</button>
+    </div>
+
     <div class="header">
         <div>
-            <h2>📍 Pune, India</h2>
+            <h2 id="locationTitle">📍 Pune, India</h2>
             <p id="time"></p>
         </div>
         <div class="temp">
@@ -21,12 +34,26 @@
         </div>
     </div>
 
+    <div id="loading" style="display: none; text-align: center; padding: 20px; color: #6b8fb5;">
+        <p>Loading weather data...</p>
+    </div>
+
     <div class="highlight">
         <h3>Weather Status</h3>
         <p id="status">Loading...</p>
     </div>
 
     <div class="grid" id="weatherContainer"></div>
+
+    <div id="forecastModal" class="forecast-modal" style="display: none;">
+        <div class="forecast-content">
+            <div class="forecast-header">
+                <h2>7-Day Forecast</h2>
+                <button id="closeBtn" class="close-btn">&times;</button>
+            </div>
+            <div id="forecastContainer" class="forecast-grid"></div>
+        </div>
+    </div>
 
 </div>
 
